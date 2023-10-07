@@ -77,6 +77,6 @@ public abstract class MixinServerGamePacketListenerImpl {
             ordinal = 2
     ))
     private void inject$handleMoveVehicle(ServerboundMoveVehiclePacket packet, CallbackInfo ci) {
-        clientIsFloating = FloatingCheckCallback.EVENT.invoker().check(player, ForgivingManager.MovingContext.VEHICLE_FLYING, clientIsFloating).get();
+        clientVehicleIsFloating = FloatingCheckCallback.EVENT.invoker().check(player, ForgivingManager.MovingContext.VEHICLE_FLYING, clientIsFloating).get();
     }
 }
