@@ -1,0 +1,9 @@
+modLoader = "javafml"
+loaderVersion = "[46,)"
+license = "All Rights Reserved"
+[[mods]]
+modId = "forgivingmovecheck"
+version = "${file.jarVersion}"
+displayName = "ForgivingMoveCheck"
+authors = "Tapio"
+description = "Make player movement check forgiving!"

@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "committee.nova.forgivingmovecheck.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "forgivingmovecheck.refmap.json",
+  "mixins": [
+    "MixinServerGamePacketListenerImpl"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

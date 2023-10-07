@@ -1,0 +1,5 @@
+{
+  "msg.forgivingmovecheck.self_flying": "%s floats too long!",
+  "msg.forgivingmovecheck.vehicle_flying": "%s floats a vehicle too long!",
+  "msg.forgivingmovecheck.idling": "%s idles too long!"
+}
