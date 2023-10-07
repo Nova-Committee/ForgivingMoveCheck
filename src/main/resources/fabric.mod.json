@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "forgivingmovecheck",
+  "version": "${version}",
+  "name": "ForgivingMoveCheck",
+  "description": "",
+  "authors": [
+    "Tapio"
+  ],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "committee.nova.forgivingmovecheck.ForgivingMoveCheck"
+    ]
+  },
+  "mixins": [
+    "forgivingmovecheck.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": "*",
+    "fabric": "*",
+    "minecraft": "*"
+  }
+}
