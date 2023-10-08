@@ -1,0 +1,5 @@
+{
+  "msg.forgivingmovecheck.self_flying": "%s漂浮时间过长！",
+  "msg.forgivingmovecheck.vehicle_flying": "%s的载具漂浮时间过长！",
+  "msg.forgivingmovecheck.idling": "%s无操作时间过长！"
+}
