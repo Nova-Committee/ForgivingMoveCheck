@@ -44,11 +44,9 @@ public abstract class MixinServerGamePacketListenerImpl {
             remap = false
     ), cancellable = true)
     private void inject$tick$selfFlying(CallbackInfo ci) {
+        aboveGroundTickCount = 0;
         final boolean skip = ForgivingMoveCheck.forgiveSelfFlying.get().getStrategy().check(player, ForgivingManager.MovingContext.SELF_FLYING, LOGGER);
-        if (skip) {
-            ci.cancel();
-            aboveGroundTickCount = 0;
-        }
+        if (skip) ci.cancel();
     }
 
     @Inject(method = "tick", at = @At(
@@ -58,11 +56,9 @@ public abstract class MixinServerGamePacketListenerImpl {
             remap = false
     ), cancellable = true)
     private void inject$tick$vehicleFlying(CallbackInfo ci) {
+        aboveGroundVehicleTickCount = 0;
         final boolean skip = ForgivingMoveCheck.forgiveVehicleFlying.get().getStrategy().check(player, ForgivingManager.MovingContext.VEHICLE_FLYING, LOGGER);
-        if (skip) {
-            ci.cancel();
-            aboveGroundVehicleTickCount = 0;
-        }
+        if (skip) ci.cancel();
     }
 
     @Inject(method = "tick", at = @At(
@@ -71,11 +67,9 @@ public abstract class MixinServerGamePacketListenerImpl {
             ordinal = 2
     ), cancellable = true)
     private void inject$tick$idling(CallbackInfo ci) {
+        player.resetLastActionTime();
         final boolean skip = ForgivingMoveCheck.forgiveIdling.get().getStrategy().check(player, ForgivingManager.MovingContext.IDLING, LOGGER);
-        if (skip) {
-            ci.cancel();
-            player.resetLastActionTime();
-        }
+        if (skip) ci.cancel();
     }
 
     @Inject(method = "handleMovePlayer", at = @At(
